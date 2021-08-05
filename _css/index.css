@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    outline: 0;
-}
-
 body {
     overflow: hidden;
 }
@@ -32,23 +24,36 @@ header div.slide img {
 .tela {
     position: absolute;
     top: 50px;
-    left: 25px;
+    left: 30px;
+    text-align: center;
 }
 
 h1 {
     color: white;
-    margin-top: 20px;
+    margin: 20px;
+    width: 300px;
 }
 
 
 main button {
     position: absolute;
     bottom: 60px;
-    left: 60px;
-    color: white;
+    left: 50px;
     background-color: #F9BC4A;
-    font-size: 40px;
-    padding: 20px;
-    width: 350px;
+
+
     cursor: pointer;
+    border-radius: 5px;
+}
+
+main button a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    padding: 60px;
+
+}
+
+main button:hover {
+
 }
