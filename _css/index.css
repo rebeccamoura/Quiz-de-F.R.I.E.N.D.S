@@ -17,7 +17,6 @@ svg {
 }
 
 .logo {
-    position: absolute;
     width: 400px;
     left: 50px;
     top: 50px;
@@ -30,6 +29,26 @@ header div.slide img {
     height: 635px;
 }
 
-h1 {
+.tela {
     position: absolute;
+    top: 50px;
+    left: 25px;
+}
+
+h1 {
+    color: white;
+    margin-top: 20px;
+}
+
+
+main button {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    color: white;
+    background-color: #F9BC4A;
+    font-size: 40px;
+    padding: 20px;
+    width: 350px;
+    cursor: pointer;
 }
