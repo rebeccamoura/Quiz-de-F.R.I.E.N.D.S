@@ -1,2 +1,73 @@
 @charset "UTF-8";
 
+body {
+    background-color: #7F7EA1;
+}
+
+
+/* main */
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+main h1 {
+    color: white;
+    margin-bottom: 20px;
+    width: 550px;
+    text-align: center;
+}
+
+
+/* perguntas */
+
+main div.pergunta img {
+    width: 550px;
+}
+
+/* OPÇÕES */
+
+main div.opcoes div.opcao:first-child {
+    margin-top: 0px;
+}
+
+main div.opcoes div.opcao {
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+div.opcoes div.alternativa {
+    background-color: #F9BC4A;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    margin-right: -30px;
+    position: relative;
+    display: inline-block;
+}
+
+div.opcoes div.resposta {
+    background-color: white;
+    color: black;
+    width: 500px;
+    height: 60px;
+    margin-left: -25px;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+main div.opcoes div.resposta:hover {
+    background-color: #7F7EA1;
+    color: white;
+    box-sizing: border-box;
+    border: 2px solid white;
+    position: relative;
+    z-index: -999;
+    top: 2px;
+}

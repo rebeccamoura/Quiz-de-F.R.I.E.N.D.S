@@ -9,5 +9,6 @@
 - Azul claro: rgb(27, 58, 87);
 
 - Verde friends: #6C7955;
+- Vermelho friends: #BC2921;
 - Roxo friends: #7F7EA1;
 - Amarelo friends: #F9BC4A;
