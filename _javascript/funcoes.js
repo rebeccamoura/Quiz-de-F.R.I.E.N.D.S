@@ -6,22 +6,34 @@ let questaoProgresso = 1
 
 
 function mostrarPergunta(numeroPergunta) {
-    q('.options').innerHTML = ''
-    q('.question h1').innerHTML = perguntas[numeroPergunta].pergunta
+    q('.opcoes').innerHTML = ''
+    q('.pergunta h1').innerHTML = perguntas[numeroPergunta].pergunta
+    q('.pergunta img').setAttribute('src', perguntas[numeroPergunta].img)
 
     perguntas[numeroPergunta].opcoes.forEach(opcao => {
-       const span = document.createElement('span')
-       span.innerHTML = opcao.resposta
+        const opcoes = document.createElement('div')
+        const alternativa = document.createElement('div')
+        const resposta = document.createElement('div')
 
-       if (opcao.certo === true) {
-           span.setAttribute('data-key', 'correto')
-       }
+        alternativa.classList.add('alternativa')
+        resposta.classList.add('resposta')
+        opcoes.classList.add('opcao')
 
-       q('.options').appendChild(span)
+        resposta.innerHTML = opcao.resposta
+        alternativa.innerHTML = opcao.alternativa
+
+        if (opcao.certo === true) {
+            opcoes.setAttribute('data-key', 'correto')
+        }
+
+        opcoes.appendChild(alternativa)
+        opcoes.appendChild(resposta)
+
+        q('.opcoes').appendChild(opcoes)
     })
 
-    qAll('.options span').forEach(span => {
-        span.addEventListener('click', verificarResposta)
+    qAll('.opcoes .opcao').forEach(opcao => {
+        opcao.addEventListener('click', verificarResposta)
     })
 }
 
