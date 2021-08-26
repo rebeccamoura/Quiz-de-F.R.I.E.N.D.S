@@ -91,7 +91,7 @@ function fimJogo() {
             q('main div.fim-jogo div.resultado--fim-jogo img').src = '_imagens/resultadobom.jpg'
             break
         default:
-            //
+            q('div.fim-jogo h1.titulo--fim-jogo').innerHTML = 'Ocorreu um erro. Tente novamente.'
 
     }
 
@@ -105,10 +105,12 @@ function reiniciarQuiz() {
     questaoAtual = 0
     questaoProgresso = 0
 
-    q('.fim-Jogo').classList.add('display-none')
-    q('.quizTest').classList.remove('display-none')
+    q('main div.fim-jogo').style.display = 'none'
+    q('main div.quiz').style.display = 'flex'
+    q('.next-question').style.display = 'block'
+    q('.next-question').innerHTML = 'Próxima questão'
 
-    aumentarProgresso()
+    //aumentarProgresso()
     mostrarPergunta(questaoAtual)
 }
 
