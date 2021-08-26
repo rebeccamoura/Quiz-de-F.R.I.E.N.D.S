@@ -8,17 +8,23 @@ body {
 /* main */
 
 main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     height: 100vh;
 }
 
-main h1 {
+main h1.pergunta--quiz {
     color: white;
     margin-bottom: 20px;
     width: 550px;
     text-align: center;
+}
+
+/* quiz */
+
+main div.quiz {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
 }
 
 
@@ -30,7 +36,7 @@ main div.pergunta img {
 
 /* Alternativas */
 
-div.opcoes div.alternativa {
+div.opcoes div.alternativa, .btn {
     background-color: white;
     width: 500px;
     height: 60px;
@@ -49,9 +55,25 @@ div.opcoes div.alternativa:first-child {
     margin-top: 0px;
 }
 
-div.opcoes div.alternativa:hover {
+div.opcoes div.alternativa:hover, .btn:hover {
     background-color: transparent;
     color: white;
+}
+
+/* next question */
+
+.btn {
+    font-size: 20px;
+    width: 200px;
+    position: absolute;
+    right: 79px;
+    bottom: 15px;
+    background-color: #F9BC4A;
+    border: 2px solid #F9BC4A;
+}
+
+main div.quiz, .next-question {
+    display: none;
 }
 
 
@@ -89,4 +111,56 @@ div.opcoes div.alternativa:hover {
     to {
         background-color: rgb(235, 5, 5);
     }
+}
+
+
+
+
+/* Fim do jogo */
+
+main div.fim-jogo {
+    overflow: hidden;
+}
+
+main div.fim-jogo h1.titulo--fim-jogo {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 50px;
+    color: #F9BC4A;
+    text-shadow: 1px 1px 5px rgb(63, 63, 63);
+}
+
+main div.fim-jogo div.resultado--fim-jogo {
+    background-color: white;
+    width: 800px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgb(63, 63, 63);
+}
+
+main div.fim-jogo div.resultado--fim-jogo img {
+    width: 450px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgb(63, 63, 63);
+    margin-top: 15px;
+}
+
+main div.fim-jogo div.resultado--fim-jogo p {
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+main div.fim-jogo div.resultado--fim-jogo button.reiniciar-quiz {
+    position: static;
+    margin-top: 10px;
+}
+
+main div.fim-jogo div.resultado--fim-jogo button.reiniciar-quiz:hover {
+    color: black;
 }

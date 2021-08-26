@@ -12,3 +12,7 @@
 - Vermelho friends: #BC2921;
 - Roxo friends: #7F7EA1;
 - Amarelo friends: #F9BC4A;
+
+# Funcionalidades a adicionar:
+
+- Não mudar a pergunta se não tiver sido respondida ainda. =D

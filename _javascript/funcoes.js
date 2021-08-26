@@ -39,8 +39,6 @@ function verificarResposta(event) {
         } else {
             event.target.classList.add('respostaErrada')
         }
-    } else {
-        console.log('não funcionou')
     }
 
 }
@@ -49,23 +47,30 @@ function verificarResposta(event) {
 
 function nextQuestion() {
 
-    if (questaoAtual < perguntas.length - 1) {
-        questaoAtual++
+    if (q('.respostaCorreta') || q('.respostaErrada')) {
+        if (questaoAtual < perguntas.length - 1) {
+            questaoAtual++
+        } else {
+            fimJogo()
+            //alert('acabou')
+        }
+    
+        if (questaoAtual == perguntas.length - 1) {
+            q('.next-question').innerHTML = 'Finalizar quiz'
+        }
+    
+        //aumentarProgresso()
+        mostrarPergunta(questaoAtual)
     } else {
-        fimJogo()
+        alert('Selecione uma resposta antes de prosseguir!')
     }
 
-    if (questaoAtual == perguntas.length - 1) {
-        q('.next-question').innerHTML = 'Finalizar quiz'
-    }
-
-    aumentarProgresso()
-    mostrarPergunta(questaoAtual)
 }
 
 function fimJogo() {
-    q('.fim-Jogo').classList.remove('display-none')
-    q('.quizTest').classList.add('display-none')
+    //q('.fim-Jogo').classList.remove('display-none')
+    q('main div.quiz').style.display = 'none'
+    q('.next-question').style.display = 'none'
 }
 
 

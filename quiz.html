@@ -12,13 +12,30 @@
 
     <main>
 
-        <div class="pergunta">
-            <h1>Pergunta aqui</h1>
-            <img src="" alt="Ilustração da pergunta">
+        <div class="quiz">
+            <div class="pergunta">
+                <h1 class="pergunta--quiz">Pergunta aqui</h1>
+                <img src="" alt="Ilustração da pergunta">
+            </div>
+            <div class="opcoes">
+
+            </div>
         </div>
 
-        <div class="opcoes">
-            
+        <button class="btn next-question">Next question</button>
+
+
+        <!-- Inicialmente a classe 'fim-jogo' é com display: none. -->
+
+        <div class="fim-jogo">
+            <h1 class="titulo--fim-jogo">Parabéns! Você foi muito bem no quiz!</h1>
+
+            <div class="resultado--fim-jogo">
+                <img src="_imagens/chandlerSeios.jpg">
+                <p>Você acertou X de Y perguntas!</p>
+
+                <button class="btn reiniciar-quiz">Reiniciar quiz</button>
+            </div>
         </div>
 
     </main>
