@@ -68,9 +68,35 @@ function nextQuestion() {
 }
 
 function fimJogo() {
-    //q('.fim-Jogo').classList.remove('display-none')
     q('main div.quiz').style.display = 'none'
     q('.next-question').style.display = 'none'
+    q('main div.fim-jogo').style.display = 'block'
+
+    switch(respostasCorretas) {
+
+        case 0:
+        case 1:
+        case 2:
+            q('div.fim-jogo h1.titulo--fim-jogo').innerHTML = 'Poxa! Tente novamente :('
+            q('main div.fim-jogo div.resultado--fim-jogo img').src = '_imagens/resultadoruim.jpg'
+            break
+        case 3:
+        case 4:
+            q('div.fim-jogo h1.titulo--fim-jogo').innerHTML = 'Tá na média! Dá para melhorar!'
+            q('main div.fim-jogo div.resultado--fim-jogo img').src = '_imagens/resultadomedio.jpg'
+            break
+        case 5:
+        case 6:
+            q('div.fim-jogo h1.titulo--fim-jogo').innerHTML = 'Parabénsss! Você mandou bem no quiz!'
+            q('main div.fim-jogo div.resultado--fim-jogo img').src = '_imagens/resultadobom.jpg'
+            break
+        default:
+            //
+
+    }
+
+    q('div.fim-jogo div.resultado--fim-jogo p').innerHTML = `Você acertou ${respostasCorretas} questões de ${perguntas.length}!`
+
 }
 
 

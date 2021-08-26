@@ -72,7 +72,7 @@ div.opcoes div.alternativa:hover, .btn:hover {
     border: 2px solid #F9BC4A;
 }
 
-main div.quiz, .next-question {
+.fim-jogo {
     display: none;
 }
 
