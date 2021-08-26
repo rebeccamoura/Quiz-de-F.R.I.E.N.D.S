@@ -11,28 +11,20 @@ function mostrarPergunta(numeroPergunta) {
     q('.pergunta img').setAttribute('src', perguntas[numeroPergunta].img)
 
     perguntas[numeroPergunta].opcoes.forEach(opcao => {
-        const opcoes = document.createElement('div')
         const alternativa = document.createElement('div')
-        const resposta = document.createElement('div')
 
         alternativa.classList.add('alternativa')
-        resposta.classList.add('resposta')
-        opcoes.classList.add('opcao')
 
-        resposta.innerHTML = opcao.resposta
-        alternativa.innerHTML = opcao.alternativa
+        alternativa.innerHTML = opcao.resposta
 
         if (opcao.certo === true) {
-            opcoes.setAttribute('data-key', 'correto')
+            alternativa.setAttribute('data-key', 'correto')
         }
 
-        opcoes.appendChild(alternativa)
-        opcoes.appendChild(resposta)
-
-        q('.opcoes').appendChild(opcoes)
+        q('.opcoes').appendChild(alternativa)
     })
 
-    qAll('.opcoes .opcao').forEach(opcao => {
+    qAll('.opcoes .alternativa').forEach(opcao => {
         opcao.addEventListener('click', verificarResposta)
     })
 }
@@ -48,11 +40,12 @@ function verificarResposta(event) {
             event.target.classList.add('respostaErrada')
         }
     } else {
-        console.log('não funcionando')
+        console.log('não funcionou')
     }
 
 }
 
+// Parei aqui no next Question
 
 function nextQuestion() {
 

@@ -28,46 +28,65 @@ main div.pergunta img {
     width: 550px;
 }
 
-/* OPÇÕES */
+/* Alternativas */
 
-main div.opcoes div.opcao:first-child {
+div.opcoes div.alternativa {
+    background-color: white;
+    width: 500px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 50px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    transition: all .3s;
+    margin-top: 50px;
+}
+
+div.opcoes div.alternativa:first-child {
     margin-top: 0px;
 }
 
-main div.opcoes div.opcao {
-    margin-top: 50px;
-    cursor: pointer;
-}
-
-div.opcoes div.alternativa {
-    background-color: #F9BC4A;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
+div.opcoes div.alternativa:hover {
+    background-color: transparent;
     color: white;
-    margin-right: -30px;
-    position: relative;
-    display: inline-block;
 }
 
-div.opcoes div.resposta {
-    background-color: white;
-    color: black;
-    width: 500px;
-    height: 60px;
-    margin-left: -25px;
-    border-radius: 50px;
-    text-align: center;
-    display: inline-block;
-}
 
-main div.opcoes div.resposta:hover {
-    background-color: #7F7EA1;
+/* Resposta Correta e Resposta Errada*/
+
+.respostaCorreta {
+    background-color: rgb(4, 185, 4);
     color: white;
-    box-sizing: border-box;
-    border: 2px solid white;
-    position: relative;
-    z-index: -999;
-    top: 2px;
+    animation: respostaCorreta .4s infinite alternate;
+}
+
+
+.respostaErrada {
+    background-color: rgb(201, 0, 0);
+    color: white;
+    animation: respostaErrada .4s infinite alternate;
+}
+
+
+@keyframes respostaCorreta {
+    from {
+        background-color: rgb(4, 185, 4);
+    }
+
+    to {
+        background-color: rgb(2, 216, 2);
+    }
+}
+
+@keyframes respostaErrada {
+    from {
+        background-color: rgb(201, 0, 0);
+    }
+
+    to {
+        background-color: rgb(235, 5, 5);
+    }
 }
