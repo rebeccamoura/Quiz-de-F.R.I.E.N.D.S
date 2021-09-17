@@ -59,27 +59,27 @@ let perguntas = [{
         certo: true
     }]  
 }, {
-    pergunta: 'Com que idade Chandler tocou em seios pela primeira vez?',
-    img: '_imagens/chandlerSeios.jpg',
+    pergunta: 'Quem nunca morou no apartamento da Monica?',
+    img: '_imagens/apartamentoFriends.png',
     opcoes: [{
         alternativa: 'A',
-        resposta: '16',
-        certo: false
+        resposta: 'Todos já moraram',
+        certo: true
     }, {
         alternativa: 'B',
-        resposta: '17',
+        resposta: 'Phoebe',
         certo: false
     }, {
         alternativa: 'C',
-        resposta: '18',
+        resposta: 'Ross',
         certo: false
     }, {
         alternativa: 'D',
-        resposta: '19',
-        certo: true
+        resposta: 'Chandler',
+        certo: false
     }]
 }, {
-    pergunta: 'Com que idade Chandler tocou em seios pela primeira vez?',
+    pergunta: 'Qual o nome da irmã gêmea de Phoebe?',
     img: '_imagens/ursulaBuffay.png',
     opcoes: [{
         alternativa: 'A',

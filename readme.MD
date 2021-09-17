@@ -1,3 +1,5 @@
+Um quiz de F.R.I.E.N.D.S desenvolvido com HTML, CSS e Javascript.
+
 # Cores
 
 - Vermelho escuro: rgb(201, 0, 0);
@@ -15,4 +17,5 @@
 
 # Funcionalidades a adicionar:
 
-- Não mudar a pergunta se não tiver sido respondida ainda. =D
+- Barra de progresso do quiz
+- Responsividade
